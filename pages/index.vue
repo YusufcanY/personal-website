@@ -1,17 +1,22 @@
 <template>
-  <div class="flex items-center justify-center h-screen overflow-hidden bg-white">
+  <div class="body-container flex items-center justify-center absolute w-full h-screen overflow-hidden bg-white">
     <div class="flex flex-row flex-wrap w-1/4">
       <div v-for="section in sections" :key="section.id" class="flex relative flex-col w-1/2 p-2">
         <a
           :class="section.box_round"
-          class="p-2 py-20 focus:outline-none bg-black text-white font-semibold text-center text-4xl z-30 overflow-hidden"
+          class="p-2 py-20 focus:outline-none  bg-black text-white font-semibold text-center text-4xl overflow-hidden"
           @click="handleSection(section.id)"
         >
           {{ section.title }}
           <div
             :id="`box-${section.id}`"
-            class="section-box absolute bg-black top-0 right-0 w-full z-10 transition-all duration-500"
-            :class="{ 'big-section': selectedId === section.id, 'left-0 w-full': !generateClass(section.id) }"
+            class="section-box absolute bg-black right-0 w-full h-full transition-all duration-500"
+            :class="{
+              'big-section': selectedId === section.id,
+              'left-0': !generateClass(section.id),
+              'bottom-0': !asdas(section.id),
+              'top-0': asdas(section.id),
+            }"
           />
         </a>
       </div>
@@ -55,6 +60,10 @@ export default {
     generateClass(sectionId) {
       return sectionId % 2;
     },
+    asdas(sectionId) {
+      if (sectionId === 1 || sectionId === 2) return false;
+      return true;
+    },
   },
 };
 </script>
@@ -62,6 +71,12 @@ export default {
 <style lang="scss">
 .big-section {
   width: 1000px;
-  height: 100%;
+  height: 50vh;
+}
+.section-box {
+  z-index: -1;
+}
+.body-container {
+  z-index: -2;
 }
 </style>
