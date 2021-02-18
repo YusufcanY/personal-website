@@ -1,10 +1,10 @@
 <template>
   <div class="body-container flex items-center justify-center absolute w-full h-screen overflow-hidden bg-white">
     <div class="flex flex-row flex-wrap w-1/4">
-      <div v-for="section in sections" :key="section.id" class="flex relative flex-col w-1/2 p-2">
+      <div v-for="section in sections" :key="section.id" class="flex relative flex-col w-1/2">
         <a
           :class="section.box_round"
-          class="p-2 py-20 focus:outline-none  bg-black text-white font-semibold text-center text-4xl overflow-hidden"
+          class="p-2 py-10 focus:outline-none cursor-pointer bg-black text-white font-semibold text-center text-xl overflow-hidden hover:bg-gray-900"
           @click="handleSection(section.id)"
         >
           {{ section.title }}
@@ -14,8 +14,8 @@
             :class="{
               'big-section': selectedId === section.id,
               'left-0': !generateClass(section.id),
-              'bottom-0': !asdas(section.id),
-              'top-0': asdas(section.id),
+              'bottom-0': !cornerPosition(section.id),
+              'top-0': cornerPosition(section.id),
             }"
           />
         </a>
@@ -60,7 +60,7 @@ export default {
     generateClass(sectionId) {
       return sectionId % 2;
     },
-    asdas(sectionId) {
+    cornerPosition(sectionId) {
       if (sectionId === 1 || sectionId === 2) return false;
       return true;
     },
@@ -70,7 +70,7 @@ export default {
 
 <style lang="scss">
 .big-section {
-  width: 1000px;
+  width: 100vh;
   height: 50vh;
 }
 .section-box {
