@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto flex flex-col justify-center items-start h-screen">
-    <div class="pb-8">
+    <div class="pb-16">
       <nuxt-link to="/">
         <img :src="require('~/assets/icons/arrow.svg')" width="50px" alt="back" class="back-button">
       </nuxt-link>
