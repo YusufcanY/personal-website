@@ -52,4 +52,19 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+.back-button:hover{
+  animation: backBounce 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+@keyframes backBounce {
+  0%{
+    margin-left: 0%;
+  }
+  50%{
+    margin-left: -15%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
 </style>
