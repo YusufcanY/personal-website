@@ -3,6 +3,9 @@
  */
 
 const head = {
+  htmlAttrs: {
+    lang: 'en',
+  },
   title: 'Yusufcan Yılmaz',
   meta: [
     { charset: 'utf-8' },
