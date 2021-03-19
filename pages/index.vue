@@ -1,24 +1,45 @@
 <template>
-  <div class="body-container flex items-center justify-center absolute w-full h-screen overflow-hidden bg-white">
-    <div class="flex flex-row flex-wrap w-1/4">
-      <div v-for="section in sections" :key="section.id" class="flex relative flex-col w-1/2">
-        <a
-          :class="section.box_round"
-          class="p-2 py-10 focus:outline-none cursor-pointer bg-black text-white font-semibold text-center text-xl overflow-hidden hover:bg-gray-900"
-          @click="handleSection(section.id)"
-        >
-          {{ section.title }}
-          <div
-            :id="`box-${section.id}`"
-            class="section-box absolute bg-black right-0 w-full h-full transition-all duration-500"
-            :class="{
-              'big-section': selectedId === section.id,
-              'left-0': !generateClass(section.id),
-              'bottom-0': !cornerPosition(section.id),
-              'top-0': cornerPosition(section.id),
-            }"
-          />
-        </a>
+  <div class="body-container p-10">
+    <div class="flex flex-col md:flex-row flex-1 justify-center items-center md:space-x-16">
+      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
+        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
+          <nuxt-link to="/code">
+            <img :src="require('~/assets/icons/apple.png')" width="120px" alt="">
+          </nuxt-link>
+        </div>
+        <p class="menu-title md:absolute text-xl font-bold">
+          Code
+        </p>
+      </div>
+      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
+        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
+          <nuxt-link to="/design">
+            <img :src="require('~/assets/icons/orange.png')" width="120px" alt="">
+          </nuxt-link>
+        </div>
+        <p class="menu-title md:absolute text-xl font-bold">
+          Design
+        </p>
+      </div>
+      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
+        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
+          <nuxt-link to="/about">
+            <img :src="require('~/assets/icons/pineapple.png')" width="120px" alt="">
+          </nuxt-link>
+        </div>
+        <p class="menu-title md:absolute text-xl font-bold">
+          About
+        </p>
+      </div>
+      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
+        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
+          <nuxt-link to="/contact">
+            <img :src="require('~/assets/icons/watermelon.png')" width="120px" alt="">
+          </nuxt-link>
+        </div>
+        <p class="menu-title md:absolute text-xl font-bold">
+          Contact
+        </p>
       </div>
     </div>
   </div>
@@ -26,57 +47,21 @@
 
 <script>
 export default {
-  data() {
-    return {
-      selectedId: 0,
-      sections: [
-        {
-          id: 1,
-          box_round: 'rounded-tl-lg',
-          title: 'Code',
-        },
-        {
-          id: 2,
-          box_round: 'rounded-tr-lg',
-          title: 'Design',
-        },
-        {
-          id: 3,
-          box_round: 'rounded-bl-lg',
-          title: 'About',
-        },
-        {
-          id: 4,
-          box_round: 'rounded-br-lg',
-          title: 'Contact',
-        },
-      ],
-    };
-  },
-  methods: {
-    handleSection(sectionId) {
-      this.selectedId = sectionId;
-    },
-    generateClass(sectionId) {
-      return sectionId % 2;
-    },
-    cornerPosition(sectionId) {
-      if (sectionId === 1 || sectionId === 2) return false;
-      return true;
-    },
-  },
 };
 </script>
 
-<style lang="scss">
-.big-section {
-  width: 100vh;
-  height: 50vh;
+<style>
+.menu-button img{
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.section-box {
-  z-index: -1;
+.menu-button:hover img{
+  transform: scale(1.4);
 }
-.body-container {
-  z-index: -2;
+.menu-title{
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  bottom: -18%;
+}
+.menu-button:hover + .menu-title{
+  bottom: 0%;
 }
 </style>
