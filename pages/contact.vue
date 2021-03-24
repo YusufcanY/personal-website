@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .menu-button img{
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
