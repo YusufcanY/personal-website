@@ -1,10 +1,5 @@
 <template>
   <div class="container mx-auto flex flex-col justify-center items-start h-screen">
-    <div class="pb-16">
-      <nuxt-link to="/">
-        <img :src="require('~/assets/icons/arrow.svg')" width="50px" alt="back" class="back-button">
-      </nuxt-link>
-    </div>
     <div class="flex items-start md:items-center relative">
       <div class="w-40 h-40 bg-red-200 rounded-full absolute" />
       <p class="text-xl z-30 pl-10">
