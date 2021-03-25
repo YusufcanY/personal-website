@@ -6,7 +6,7 @@ import plugins from './config/plugins';
 import buildModules from './config/build_modules';
 import modules from './config/modules';
 import build from './config/build';
-import env from './config/env';
+// import env from './config/env';
 import tailwindcss from './config/tailwind';
 
 export default {
@@ -18,6 +18,6 @@ export default {
   buildModules,
   modules,
   build,
-  env,
+  // env,
   tailwindcss,
 };
