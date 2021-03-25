@@ -23,39 +23,39 @@ export default {
       frontMenuStat: false,
       frontItems: [
         {
-          id: '1',
+          id: 1,
           name: 'vue',
         },
         {
-          id: '2',
+          id: 2,
           name: 'react',
         },
         {
-          id: '3',
+          id: 3,
           name: 'javascript',
         },
         {
-          id: '4',
+          id: 4,
           name: 'html-5',
         },
         {
-          id: '5',
+          id: 5,
           name: 'css-3',
         },
         {
-          id: '6',
-          name: 'tailwind',
-        },
-        {
-          id: '7',
+          id: 6,
           name: 'nuxt',
         },
         {
-          id: '8',
+          id: 7,
+          name: 'tailwind',
+        },
+        {
+          id: 8,
           name: 'php',
         },
         {
-          id: '9',
+          id: 9,
           name: 'laravel',
         },
       ],
