@@ -1,5 +1,5 @@
 <template>
-  <div class="body-container relative h-screen flex flex-col justify-center items-center">
+  <div class="body-container flex flex-col h-screen relative justify-center items-center">
     <div class="overflow-hidden flex flex-col justify-center items-center relative z-20">
       <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
         <a class="cursor-pointer" @click="toggleFrontMenu">
@@ -8,7 +8,13 @@
       </div>
     </div>
     <div class="bubble-menu">
-      <bubble-info v-for="item in frontItems" :key="item.id" :index="item.id" :item-name="item.name" :menu-stat="frontMenuStat" />
+      <bubble-info
+        v-for="item in frontItems"
+        :key="item.id"
+        :index="item.id"
+        :item-name="item.name"
+        :menu-stat="frontMenuStat"
+      />
     </div>
   </div>
 </template>
@@ -75,5 +81,13 @@ export default {
 }
 .menu-button:hover img {
   transform: scale(1.4);
+}
+.body-container {
+  height: 100vh;
+}
+@media screen and (max-height: 950px) {
+  .body-container {
+    height: 953px;
+  }
 }
 </style>
