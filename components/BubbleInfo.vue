@@ -6,7 +6,7 @@
       class="flex justify-center absolute items-center rounded-full w-16 h-16 bg-black"
     >
       <a class="cursor-pointer">
-        <img :src="require(`~/assets/icons/code/${itemName}.svg`)" width="120px" :alt="itemName">
+        <img :src="require(`~/assets/icons/${folderName}/${itemName}.svg`)" width="120px" :alt="itemName">
       </a>
     </div>
   </transition>
@@ -27,6 +27,10 @@ export default {
       type: String,
       required: true,
     },
+    folderName: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
@@ -41,7 +45,10 @@ export default {
   .bubble-menu-item-6,
   .bubble-menu-item-7,
   .bubble-menu-item-8,
-  .bubble-menu-item-9 {
+  .bubble-menu-item-9,
+  .bubble-menu-item-10,
+  .bubble-menu-item-11,
+  .bubble-menu-item-12 {
     transform: translate(-50%, -50%);
   }
 }
@@ -52,13 +59,14 @@ export default {
 }
 /* react */
 .bubble-menu-item-2 {
-  top: 29%;
+  top: 37%;
   left: 50%;
 }
 /* js */
 .bubble-menu-item-3 {
-  top: 37%;
-  left: 50%;
+    top: 50%;
+  left: 57%;
+
 }
 /* html */
 .bubble-menu-item-4 {
@@ -67,28 +75,45 @@ export default {
 }
 /* css */
 .bubble-menu-item-5 {
-  top: 71%;
-  left: 50%;
+    top: 50%;
+  left: 39%;
+
 }
 /* nuxt */
 .bubble-menu-item-6 {
-  top: 50%;
-  left: 39%;
+      top: 29%;
+  left: 50%;
+
 }
 /* tailwind */
 .bubble-menu-item-7 {
-  top: 79%;
-  left: 50%;
+      top: 50%;
+  left: 61%;
+
+
 }
 /* php */
 .bubble-menu-item-8 {
-  top: 50%;
-  left: 57%;
+  top: 71%;
+  left: 50%;
+
 }
 /* laravel */
 .bubble-menu-item-9 {
   top: 50%;
-  left: 61%;
+  left: 35%;
+}
+.bubble-menu-item-10 {
+  top: 20%;
+  left: 50%;
+}
+.bubble-menu-item-11 {
+  top: 50%;
+  left: 65%;
+}
+.bubble-menu-item-12 {
+  top: 79%;
+  left: 50%;
 }
 .bubble-menu-enter-active,
 .bubble-menu-leave-active {
