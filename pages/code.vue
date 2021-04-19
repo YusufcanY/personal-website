@@ -14,6 +14,7 @@
         :index="item.id"
         :item-name="item.name"
         :menu-stat="bubbleMenuStat"
+        folder-name="code"
       />
     </div>
   </div>
@@ -34,11 +35,11 @@ export default {
         },
         {
           id: 2,
-          name: 'react',
+          name: 'javascript',
         },
         {
           id: 3,
-          name: 'javascript',
+          name: 'php',
         },
         {
           id: 4,
@@ -46,23 +47,23 @@ export default {
         },
         {
           id: 5,
-          name: 'css-3',
-        },
-        {
-          id: 6,
           name: 'nuxt',
         },
         {
+          id: 6,
+          name: 'react',
+        },
+        {
           id: 7,
-          name: 'tailwind',
+          name: 'laravel',
         },
         {
           id: 8,
-          name: 'php',
+          name: 'css-3',
         },
         {
-          id: 9,
-          name: 'laravel',
+          id: 12,
+          name: 'tailwind',
         },
       ],
     };
