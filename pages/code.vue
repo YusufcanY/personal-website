@@ -2,18 +2,18 @@
   <div class="body-container flex flex-col h-screen relative justify-center items-center">
     <div class="overflow-hidden flex flex-col justify-center items-center relative z-20">
       <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
-        <a class="cursor-pointer" @click="toggleFrontMenu">
+        <a class="cursor-pointer" @click="toggleBubbleMenu">
           <img :src="require('~/assets/icons/home/apple.png')" width="120px" alt="front">
         </a>
       </div>
     </div>
     <div class="bubble-menu">
       <bubble-info
-        v-for="item in frontItems"
+        v-for="item in bubbleItems"
         :key="item.id"
         :index="item.id"
         :item-name="item.name"
-        :menu-stat="frontMenuStat"
+        :menu-stat="bubbleMenuStat"
       />
     </div>
   </div>
@@ -26,8 +26,8 @@ export default {
   components: { BubbleInfo },
   data() {
     return {
-      frontMenuStat: false,
-      frontItems: [
+      bubbleMenuStat: false,
+      bubbleItems: [
         {
           id: 1,
           name: 'vue',
@@ -68,8 +68,8 @@ export default {
     };
   },
   methods: {
-    toggleFrontMenu() {
-      this.frontMenuStat = !this.frontMenuStat;
+    toggleBubbleMenu() {
+      this.bubbleMenuStat = !this.bubbleMenuStat;
     },
   },
 };
