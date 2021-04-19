@@ -1,6 +1,6 @@
 <template>
   <div class="body-container p-10">
-    <div class="flex flex-col md:flex-row flex-1 justify-center items-center md:space-x-16">
+    <div class="flex flex-col md:flex-row flex-1 md:h-screen justify-center items-center md:space-x-16">
       <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
         <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
           <a href="https://github.com/YusufcanY">
