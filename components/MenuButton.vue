@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden flex flex-col justify-center items-center relative pb-8">
+  <div class="overflow-hidden flex flex-col justify-center items-center relative pb-8" @click.prevent.stop="onClickEvent">
     <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
       <nuxt-link :to="item.to">
         <img :src="item.icon" width="120px" alt="design">
@@ -18,6 +18,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  methods: {
+    onClickEvent() {
+      this.$emit('click');
+    }, // TODO:click emit
   },
 
 };
