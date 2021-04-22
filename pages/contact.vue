@@ -23,7 +23,7 @@
       </div>
       <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
         <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
-          <a href="mailto:ycanny1@gmail.com">
+          <a href="mailto:info@yusufcanyilmaz.com">
             <img :src="require('~/assets/icons/contact/mail.svg')" width="120px" alt="mail">
           </a>
         </div>
