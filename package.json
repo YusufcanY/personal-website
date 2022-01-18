@@ -1,8 +1,8 @@
 {
-  "name": "jju-diary",
+  "name": "yusufcan-yilmaz",
   "version": "1.0.0",
-  "description": "for diary",
-  "author": "juuuu🐳",
+  "description": "Yusufcan Yılmaz | Frontend Developer | Vue.js kullanarak projeler geliştiren bir yazılımcıdır. Kendini geliştiren projelerde yer almaktan gurur duyar.",
+  "author": "yusufcany",
   "private": true,
   "scripts": {
     "dev": "nuxt",
