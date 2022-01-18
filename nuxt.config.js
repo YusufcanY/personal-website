@@ -20,4 +20,8 @@ export default {
   build,
   // env,
   tailwindcss,
+  sitemap: {
+    hostname: 'https://yusufcanyilmaz.com',
+    gzip: true,
+  },
 };
