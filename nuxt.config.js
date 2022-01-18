@@ -24,4 +24,8 @@ export default {
     hostname: 'https://yusufcanyilmaz.com',
     gzip: true,
   },
+  robots:{
+    UserAgent: '*',
+    Sitemap: 'https://yusufcanyilmaz.com/sitemap.xml',
+  }
 };
