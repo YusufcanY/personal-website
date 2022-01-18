@@ -1,62 +1,94 @@
 <template>
-  <div class="body-container flex flex-row flex-wrap justify-center items-start py-32">
-    <skill-card v-for="(item, index) in skills" :key="index" :icon="item.name" icon-path="code">
-      <template>
-        <div>
-          {{ item.content }}
-        </div>
-      </template>
-    </skill-card>
+  <div class="relative flex flex-col items-center justify-center h-screen body-container">
+    <div class="relative z-20 flex flex-col items-center justify-center overflow-hidden">
+      <div class="flex items-center justify-center w-32 h-32 bg-black rounded-full menu-button">
+        <a class="cursor-pointer" @click="toggleBubbleMenu">
+          <img :src="require('~/assets/icons/home/apple.png')" width="120px" alt="front">
+        </a>
+      </div>
+    </div>
+    <div class="bubble-menu">
+      <bubble-info
+        v-for="item in bubbleItems"
+        :key="item.id"
+        :index="item.id"
+        :item-name="item.name"
+        :menu-stat="bubbleMenuStat"
+        folder-name="code"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import SkillCard from '~/components/SkillCard.vue';
+import BubbleInfo from '~/components/BubbleInfo.vue';
 
 export default {
-  components: { SkillCard },
+  components: { BubbleInfo },
   data() {
     return {
-      skills: [
+      bubbleMenuStat: false,
+      bubbleItems: [
         {
-          name: 'javascript',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
-        },
-        {
+          id: 1,
           name: 'vue',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
         },
         {
-          name: 'nuxt',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
+          id: 2,
+          name: 'javascript',
         },
         {
-          name: 'react',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
+          id: 3,
+          name: 'php',
         },
         {
+          id: 4,
           name: 'html-5',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
         },
         {
+          id: 5,
+          name: 'nuxt',
+        },
+        {
+          id: 6,
+          name: 'react',
+        },
+        {
+          id: 7,
+          name: 'laravel',
+        },
+        {
+          id: 8,
           name: 'css-3',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
         },
         {
+          id: 12,
           name: 'tailwind',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa nesciunt cupiditate maiores!',
         },
       ],
     };
   },
+  methods: {
+    toggleBubbleMenu() {
+      this.bubbleMenuStat = !this.bubbleMenuStat;
+    },
+  },
 };
 </script>
 
-<style scoped>
-.body-container > *{
-  margin: 10px;
+<style lang="scss" scoped>
+.menu-button img {
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.border-primary{
-  border: 1px solid rgba(0, 0, 0, 0.125)
+.menu-button:hover img {
+  transform: scale(1.4);
+}
+.body-container {
+  height: 100vh;
+}
+@media screen and (max-height: 950px) {
+  .body-container {
+    height: 953px;
+  }
 }
 </style>
