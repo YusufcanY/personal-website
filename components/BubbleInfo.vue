@@ -3,7 +3,7 @@
     <div
       v-if="menuStat"
       :class="`bubble-menu-item-${index}`"
-      class="flex justify-center absolute items-center rounded-full w-16 h-16 bg-black"
+      class="absolute flex items-center justify-center w-16 h-16 bg-black rounded-full"
     >
       <a class="cursor-pointer">
         <img :src="require(`~/assets/icons/${folderName}/${itemName}.svg`)" width="120px" :alt="itemName">
@@ -64,9 +64,8 @@ export default {
 }
 /* js */
 .bubble-menu-item-3 {
-    top: 50%;
+  top: 50%;
   left: 57%;
-
 }
 /* html */
 .bubble-menu-item-4 {
@@ -75,28 +74,23 @@ export default {
 }
 /* css */
 .bubble-menu-item-5 {
-    top: 50%;
+  top: 50%;
   left: 39%;
-
 }
 /* nuxt */
 .bubble-menu-item-6 {
-      top: 29%;
+  top: 29%;
   left: 50%;
-
 }
 /* tailwind */
 .bubble-menu-item-7 {
-      top: 50%;
+  top: 50%;
   left: 61%;
-
-
 }
 /* php */
 .bubble-menu-item-8 {
   top: 71%;
   left: 50%;
-
 }
 /* laravel */
 .bubble-menu-item-9 {
