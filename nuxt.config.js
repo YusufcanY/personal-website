@@ -25,12 +25,6 @@ export default {
       size: 'normal',
       siteKey: '6LfSnCUeAAAAAOQbA5hmKrjHoRud49oAhQIODP0Z',
     },
-    googleAnalytics: {
-      id: 'GTM-NNTRKBB',
-    },
-  },
-  googleAnalytics: {
-    id: 'GTM-NNTRKBB',
   },
   sitemap: {
     hostname: 'https://yusufcanyilmaz.com',

@@ -73,6 +73,11 @@ export default {
       this.bubbleMenuStat = !this.bubbleMenuStat;
     },
   },
+  head() {
+    return {
+      title: 'Code | Yusufcan Yılmaz',
+    };
+  },
 };
 </script>
 

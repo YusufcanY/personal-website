@@ -53,6 +53,11 @@ export default {
       this.bubbleMenuStat = !this.bubbleMenuStat;
     },
   },
+  head() {
+    return {
+      title: 'Design | Yusufcan Yılmaz',
+    };
+  },
 };
 </script>
 

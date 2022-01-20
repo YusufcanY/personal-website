@@ -23,7 +23,11 @@
 
 <script>
 export default {
-
+  head() {
+    return {
+      title: 'About | Yusufcan Yılmaz',
+    };
+  },
 };
 </script>
 

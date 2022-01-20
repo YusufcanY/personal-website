@@ -90,6 +90,11 @@ export default {
       }
     },
   },
+  head() {
+    return {
+      title: 'Leave Note | Yusufcan Yılmaz',
+    };
+  },
 };
 </script>
 
