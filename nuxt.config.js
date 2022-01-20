@@ -26,11 +26,11 @@ export default {
       siteKey: '6LfSnCUeAAAAAOQbA5hmKrjHoRud49oAhQIODP0Z',
     },
     googleAnalytics: {
-      id: 'G-H7L2CZ2QYS',
+      id: 'GTM-NNTRKBB',
     },
   },
   googleAnalytics: {
-    id: 'G-H7L2CZ2QYS',
+    id: 'GTM-NNTRKBB',
   },
   sitemap: {
     hostname: 'https://yusufcanyilmaz.com',
