@@ -9,11 +9,10 @@
           {{ alerts[0] ? alerts[0].message : 'Leave Note' }}
         </button>
       </div>
-      <div v-if="showRecaptcha" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-opacity-75 bg-foreground">
+      <div v-if="showRecaptcha" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-opacity-75 bg-foreground" @click="toggleRecaptcha">
         <recaptcha
-          v-click-outside="toggleRecaptcha"
           @error="onRecaptchaError"
-          @success="postNote()"
+          @success="postNote"
           @expired="onRecaptchaExpired"
         />
       </div>
@@ -23,13 +22,9 @@
 
 <script>
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import vClickOutside from 'v-click-outside';
+import { getFirestore, addDoc, collection } from 'firebase/firestore';
 
 export default {
-  directives: {
-    clickOutside: vClickOutside.directive,
-  },
   data() {
     return {
       showRecaptcha: false,
@@ -86,12 +81,12 @@ export default {
           content: this.note,
         });
         this.showRecaptcha = false;
-        this.alerts[0].push({
+        this.alerts.push({
           color: 'bg-green-400',
           message: 'Note sent successfully',
         });
       } catch (e) {
-        this.alerts[0].push({
+        this.alerts.push({
           color: 'bg-green-400',
           message: `Error adding document: ${e}`,
         });
