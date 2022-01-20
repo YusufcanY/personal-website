@@ -21,8 +21,7 @@
 </template>
 
 <script>
-import { initializeApp } from 'firebase/app';
-import { getFirestore, addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 
 export default {
   data() {
@@ -41,19 +40,6 @@ export default {
         }, 3000);
       }
     },
-  },
-  mounted() {
-    const firebaseConfig = {
-      apiKey: 'AIzaSyCvcABL2a8UHaodjyOHMhN0I6MW0PxiZhU',
-      authDomain: 'yusufcan-yilmaz-com.firebaseapp.com',
-      projectId: 'yusufcan-yilmaz-com',
-      storageBucket: 'yusufcan-yilmaz-com.appspot.com',
-      messagingSenderId: '427713746573',
-      appId: '1:427713746573:web:d0cf18d9eda825715ef4c4',
-    };
-
-    initializeApp(firebaseConfig);
-    this.db = getFirestore();
   },
   methods: {
     toggleRecaptcha() {
@@ -86,7 +72,7 @@ export default {
     },
     async postNote() {
       try {
-        await addDoc(collection(this.db, 'notes'), {
+        await addDoc(collection(this.$db, 'notes'), {
           content: this.note,
         });
         this.showRecaptcha = false;
