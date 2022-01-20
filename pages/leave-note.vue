@@ -1,10 +1,10 @@
 <template>
   <div class="container flex items-center min-h-screen mx-auto">
-    <div class="grid w-full grid-cols-12 gap-x-16">
-      <div class="col-span-8">
+    <div class="grid w-full grid-cols-12 px-4 gap-y-4 md:gap-x-16 md:px-0">
+      <div class="col-span-12 md:col-span-8">
         <input v-model="note" class="w-full px-2 py-2 font-black text-white transition-all duration-200 bg-gray-800 rounded-md outline-none hover:shadow-lg focus:ring ring-gray-600 ring-offset-foreground ring-offset-4" placeholder="Let's get have fun" type="text">
       </div>
-      <div class="col-span-4">
+      <div class="col-span-12 md:col-span-4">
         <button :class="[alerts[0] ? alerts[0].color : 'bg-gray-800' ]" class="w-full py-2 font-black text-white transition-all duration-200 transform rounded-md focus:bg-opacity-75 hover:-translate-y-1 hover:shadow-lg" @click="handleNote()">
           {{ alerts[0] ? alerts[0].message : 'Leave Note' }}
         </button>
