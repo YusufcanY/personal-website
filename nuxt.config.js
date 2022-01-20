@@ -22,7 +22,7 @@ export default {
     recaptcha: {
       /* reCAPTCHA options */
       version: 2,
-      size: 'compact',
+      size: 'normal',
       siteKey: '6LfSnCUeAAAAAOQbA5hmKrjHoRud49oAhQIODP0Z',
     },
   },

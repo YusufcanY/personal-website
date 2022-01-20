@@ -5,12 +5,13 @@
         <input v-model="note" class="w-full px-2 py-2 font-black text-white transition-all duration-200 bg-gray-800 rounded-md outline-none hover:shadow-lg focus:ring ring-gray-600 ring-offset-foreground ring-offset-4" placeholder="Let's get have fun" type="text">
       </div>
       <div class="col-span-4">
-        <button class="w-full py-2 font-black text-white transition-all duration-200 transform bg-gray-800 rounded-md focus:bg-opacity-75 hover:-translate-y-1 hover:shadow-lg" @click="showRecaptcha = true">
-          Leave Note
+        <button :class="[alerts[0] ? alerts[0].color : 'bg-gray-800' ]" class="w-full py-2 font-black text-white transition-all duration-200 transform rounded-md focus:bg-opacity-75 hover:-translate-y-1 hover:shadow-lg" @click="handleNote()">
+          {{ alerts[0] ? alerts[0].message : 'Leave Note' }}
         </button>
       </div>
-      <div v-if="showRecaptcha" class="col-span-12">
+      <div v-if="showRecaptcha" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-opacity-75 bg-foreground">
         <recaptcha
+          v-click-outside="toggleRecaptcha"
           @error="onRecaptchaError"
           @success="postNote()"
           @expired="onRecaptchaExpired"
@@ -23,11 +24,16 @@
 <script>
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import vClickOutside from 'v-click-outside';
 
 export default {
+  directives: {
+    clickOutside: vClickOutside.directive,
+  },
   data() {
     return {
       showRecaptcha: false,
+      alerts: [],
       db: null,
       note: null,
     };
@@ -46,21 +52,49 @@ export default {
     this.db = getFirestore();
   },
   methods: {
+    toggleRecaptcha() {
+      this.showRecaptcha = !this.showRecaptcha;
+    },
+    handleNote() {
+      if (this.note && this.note.length > 0) {
+        if (this.alerts[0]) {
+          this.alerts = [];
+        }
+        this.showRecaptcha = true;
+      } else {
+        this.alerts.push({
+          color: 'bg-red-400',
+          message: 'Fill the note field',
+        });
+      }
+    },
     onRecaptchaError() {
-      console.error('Recaptcha error');
+      this.alerts.push({
+        color: 'bg-red-400',
+        message: 'Recaptcha error',
+      });
     },
     onRecaptchaExpired() {
-      console.error('Recaptcha expired');
+      this.alerts.push({
+        color: 'bg-red-400',
+        message: 'Recaptcha expired',
+      });
     },
     async postNote() {
       try {
-        const docRef = await addDoc(collection(this.db, 'notes'), {
+        await addDoc(collection(this.db, 'notes'), {
           content: this.note,
         });
         this.showRecaptcha = false;
-        console.log('Document written with ID: ', docRef.id);
+        this.alerts[0].push({
+          color: 'bg-green-400',
+          message: 'Note sent successfully',
+        });
       } catch (e) {
-        console.error('Error adding document: ', e);
+        this.alerts[0].push({
+          color: 'bg-green-400',
+          message: `Error adding document: ${e}`,
+        });
       }
     },
   },
