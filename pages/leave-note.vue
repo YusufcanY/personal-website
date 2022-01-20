@@ -71,9 +71,11 @@ export default {
       });
     },
     async postNote() {
+      const nowDate = new Date();
       try {
         await addDoc(collection(this.$db, 'notes'), {
           content: this.note,
+          created_at: `${nowDate.toLocaleDateString()} ${nowDate.toLocaleTimeString()}`,
         });
         this.showRecaptcha = false;
         this.alerts.push({
