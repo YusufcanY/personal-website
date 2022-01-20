@@ -6,7 +6,6 @@ import plugins from './config/plugins';
 import buildModules from './config/build_modules';
 import modules from './config/modules';
 import build from './config/build';
-// import env from './config/env';
 import tailwindcss from './config/tailwind';
 
 export default {
@@ -18,14 +17,21 @@ export default {
   buildModules,
   modules,
   build,
-  // env,
   tailwindcss,
+  publicRuntimeConfig: {
+    recaptcha: {
+      /* reCAPTCHA options */
+      version: 2,
+      size: 'compact',
+      siteKey: '6LfSnCUeAAAAAOQbA5hmKrjHoRud49oAhQIODP0Z',
+    },
+  },
   sitemap: {
     hostname: 'https://yusufcanyilmaz.com',
     gzip: true,
   },
-  robots:{
+  robots: {
     UserAgent: '*',
     Sitemap: 'https://yusufcanyilmaz.com/sitemap.xml',
-  }
+  },
 };
