@@ -33,6 +33,15 @@ export default {
       note: null,
     };
   },
+  watch: {
+    alerts(val) {
+      if (val[0]) {
+        setTimeout(() => {
+          this.alerts = [];
+        }, 3000);
+      }
+    },
+  },
   mounted() {
     const firebaseConfig = {
       apiKey: 'AIzaSyCvcABL2a8UHaodjyOHMhN0I6MW0PxiZhU',
