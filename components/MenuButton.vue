@@ -1,11 +1,11 @@
 <template>
-  <div class="overflow-hidden flex flex-col justify-center items-center relative pb-8" @click.prevent.stop="onClickEvent">
-    <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 bg-black">
+  <div class="relative flex flex-col items-center justify-center pb-8 overflow-hidden" @click.prevent.stop="onClickEvent">
+    <div class="flex items-center justify-center w-32 h-32 bg-gray-800 rounded-full menu-button">
       <nuxt-link :to="item.to">
         <img :src="item.icon" width="120px" alt="design">
       </nuxt-link>
     </div>
-    <p class="menu-title md:absolute text-xl font-bold">
+    <p class="text-xl font-bold text-white menu-title md:absolute">
       {{ item.title }}
     </p>
   </div>

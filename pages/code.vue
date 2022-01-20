@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex flex-col items-center justify-center h-screen body-container">
     <div class="relative z-20 flex flex-col items-center justify-center overflow-hidden">
-      <div class="flex items-center justify-center w-32 h-32 bg-black rounded-full menu-button">
+      <div class="flex items-center justify-center w-32 h-32 bg-gray-800 rounded-full menu-button">
         <a class="cursor-pointer" @click="toggleBubbleMenu">
           <img :src="require('~/assets/icons/home/apple.png')" width="120px" alt="front">
         </a>

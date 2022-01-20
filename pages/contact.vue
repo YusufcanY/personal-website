@@ -1,43 +1,43 @@
 <template>
-  <div class="body-container p-10">
-    <div class="flex flex-col md:flex-row flex-1 md:h-screen justify-center items-center md:space-x-16">
-      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
-        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
+  <div class="p-10">
+    <div class="flex flex-col items-center justify-center flex-1 md:flex-row md:h-screen md:space-x-16">
+      <div class="relative flex flex-col items-center justify-center pb-8 overflow-hidden menu-container">
+        <div class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0">
           <a href="https://github.com/YusufcanY">
             <img :src="require('~/assets/icons/contact/github.svg')" width="120px" alt="github">
           </a>
         </div>
-        <p class="menu-title md:absolute text-xl font-bold">
+        <p class="text-xl font-bold menu-title md:absolute">
           Github
         </p>
       </div>
-      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
-        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
+      <div class="relative flex flex-col items-center justify-center pb-8 overflow-hidden menu-container">
+        <div class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0">
           <a href="https://www.instagram.com/yusufcan.n">
             <img :src="require('~/assets/icons/contact/instagram.svg')" width="120px" alt="instagram">
           </a>
         </div>
-        <p class="menu-title md:absolute text-xl font-bold">
+        <p class="text-xl font-bold menu-title md:absolute">
           Instagram
         </p>
       </div>
-      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
-        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
+      <div class="relative flex flex-col items-center justify-center pb-8 overflow-hidden menu-container">
+        <div class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0">
           <a href="mailto:info@yusufcanyilmaz.com">
             <img :src="require('~/assets/icons/contact/mail.svg')" width="120px" alt="mail">
           </a>
         </div>
-        <p class="menu-title md:absolute text-xl font-bold">
+        <p class="text-xl font-bold menu-title md:absolute">
           Mail
         </p>
       </div>
-      <div class="menu-container overflow-hidden flex flex-col justify-center items-center relative pb-8">
-        <div class="menu-button flex justify-center items-center rounded-full w-32 h-32 border-2 border-black hover:border-opacity-0 transition-all duration-300">
+      <div class="relative flex flex-col items-center justify-center pb-8 overflow-hidden menu-container">
+        <div class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0">
           <a href="https://www.linkedin.com/in/yusufcan-yilmaz/">
             <img :src="require('~/assets/icons/contact/linkedin.svg')" width="120px" alt="linkedin">
           </a>
         </div>
-        <p class="menu-title md:absolute text-xl font-bold">
+        <p class="text-xl font-bold menu-title md:absolute">
           Linkedin
         </p>
       </div>

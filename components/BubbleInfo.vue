@@ -3,7 +3,7 @@
     <div
       v-if="menuStat"
       :class="`bubble-menu-item-${index}`"
-      class="absolute flex items-center justify-center w-16 h-16 bg-black rounded-full"
+      class="absolute flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full"
     >
       <a class="cursor-pointer">
         <img :src="require(`~/assets/icons/${folderName}/${itemName}.svg`)" width="120px" :alt="itemName">

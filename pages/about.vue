@@ -1,11 +1,11 @@
 <template>
-  <div class="container mx-auto flex flex-col h-screen">
+  <div class="container flex flex-col h-screen mx-auto">
     <div class="flex justify-center w-full">
       <img :src="require('~/assets/illustration-profile.png')" width="400px" alt="">
     </div>
-    <div class="flex items-start relative">
-      <div class="w-20 h-20 md:w-32 md:h-32 bg-red-200 rounded-full absolute" />
-      <p class="text-xl z-30 px-5 md:pl-10">
+    <div class="relative flex items-start text-white">
+      <div class="absolute w-20 h-20 bg-red-500 bg-opacity-50 rounded-full md:w-32 md:h-32" />
+      <p class="z-30 px-5 text-xl md:pl-10">
         &nbsp;&nbsp; Hello, i am Yusufcan. I am Fronend Developer and thats my website. If you wannna learn about my skills you can check <nuxt-link to="/code">
           Code
         </nuxt-link> page or <nuxt-link to="/design">

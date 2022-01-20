@@ -1,6 +1,6 @@
 <template>
-  <div class="body-container p-10">
-    <div class="flex flex-col md:flex-row flex-1 justify-center items-center md:space-x-16">
+  <div class="p-10">
+    <div class="flex flex-col items-center justify-center flex-1 md:flex-row md:space-x-16">
       <menu-button v-for="(item,index) in navItems" :key="index" :item="item" />
     </div>
   </div>
