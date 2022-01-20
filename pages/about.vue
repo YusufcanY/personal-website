@@ -13,6 +13,11 @@
         </nuxt-link> page. I doing skatebording in my freetimes. Also playing some video games. Sometimes with my office mates. I pretty well with my office mates, after work or in work. I speak English but I can not practice my accent because I live in Turkey. <br><br>&nbsp;&nbsp; About how i discovered web developing, i created my first website at 12 years old. After that i developed some C# programs in high school. I learned how to develop web fronted and now i striving to build upon what I know about Frontend.
       </p>
     </div>
+    <div class="self-end">
+      <nuxt-link tag="button" to="/leave-note" class="px-4 py-2 mt-4 font-black text-white transition-all duration-200 transform bg-gray-800 rounded-md focus:bg-opacity-75 hover:-translate-y-1 hover:shadow-lg">
+        Leave a note to me
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
