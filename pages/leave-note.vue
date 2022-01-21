@@ -83,9 +83,10 @@ export default {
           message: 'Note sent successfully',
         });
       } catch (e) {
+        this.showRecaptcha = false;
         this.alerts.push({
-          color: 'bg-green-400',
-          message: `Error adding document: ${e}`,
+          color: 'bg-red-400',
+          message: 'Firebase error, try again later.',
         });
       }
     },
