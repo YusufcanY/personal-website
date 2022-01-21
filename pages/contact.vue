@@ -7,7 +7,7 @@
             <img :src="require('~/assets/icons/contact/github.svg')" width="120px" alt="github">
           </a>
         </div>
-        <p class="text-xl font-bold menu-title md:absolute">
+        <p class="text-xl font-bold text-white menu-title md:absolute">
           Github
         </p>
       </div>
@@ -17,7 +17,7 @@
             <img :src="require('~/assets/icons/contact/instagram.svg')" width="120px" alt="instagram">
           </a>
         </div>
-        <p class="text-xl font-bold menu-title md:absolute">
+        <p class="text-xl font-bold text-white menu-title md:absolute">
           Instagram
         </p>
       </div>
@@ -27,7 +27,7 @@
             <img :src="require('~/assets/icons/contact/mail.svg')" width="120px" alt="mail">
           </a>
         </div>
-        <p class="text-xl font-bold menu-title md:absolute">
+        <p class="text-xl font-bold text-white menu-title md:absolute">
           Mail
         </p>
       </div>
@@ -37,7 +37,7 @@
             <img :src="require('~/assets/icons/contact/linkedin.svg')" width="120px" alt="linkedin">
           </a>
         </div>
-        <p class="text-xl font-bold menu-title md:absolute">
+        <p class="text-xl font-bold text-white menu-title md:absolute">
           Linkedin
         </p>
       </div>
