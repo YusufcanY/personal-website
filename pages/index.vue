@@ -1,7 +1,7 @@
 <template>
   <div class="p-10">
-    <div class="flex flex-col items-center justify-center flex-1 md:flex-row md:space-x-16">
-      <menu-button v-for="(item,index) in navItems" :key="index" :item="item" />
+    <div class="flex flex-col items-center justify-center flex-1 md:flex-row md:h-screen md:space-x-16">
+      <menu-button v-for="(item, index) in navItems" :key="index" :item="item" />
     </div>
   </div>
 </template>
@@ -40,6 +40,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
