@@ -9,8 +9,8 @@ export default (_, inject) => {
     projectId: 'yusufcan-yilmaz-com',
     storageBucket: 'yusufcan-yilmaz-com.appspot.com',
     messagingSenderId: '427713746573',
-    appId: '1:427713746573:web:d0cf18d9eda825715ef4c4',
-    measurementId: 'G-H7L2CZ2QYS',
+    appId: '1:427713746573:web:204a7524bd9a6c145ef4c4',
+    measurementId: 'G-KWC9PMKWZN',
   };
 
   const app = initializeApp(firebaseConfig);
