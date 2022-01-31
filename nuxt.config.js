@@ -1,4 +1,3 @@
-import mode from './config/mode';
 import head from './config/head';
 import loading from './config/loading';
 import css from './config/css';
@@ -9,7 +8,6 @@ import build from './config/build';
 import tailwindcss from './config/tailwind';
 
 export default {
-  mode,
   head,
   loading,
   css,
