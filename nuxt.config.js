@@ -8,6 +8,7 @@ import build from './config/build';
 import tailwindcss from './config/tailwind';
 
 export default {
+  ssr: false,
   head,
   loading,
   css,
