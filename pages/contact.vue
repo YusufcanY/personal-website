@@ -5,7 +5,7 @@
         <div
           class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0"
         >
-          <a href="https://github.com/YusufcanY">
+          <a target="_blank" href="https://github.com/YusufcanY">
             <img :src="require('~/assets/icons/contact/github.svg')" width="120px" alt="github" />
           </a>
         </div>
@@ -17,7 +17,7 @@
         <div
           class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0"
         >
-          <a href="https://www.instagram.com/yusufcan.n">
+          <a target="_blank" href="https://www.instagram.com/yusufcan.n">
             <img :src="require('~/assets/icons/contact/instagram.svg')" width="120px" alt="instagram" />
           </a>
         </div>
@@ -29,7 +29,7 @@
         <div
           class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0"
         >
-          <a href="mailto:info@yusufcanyilmaz.com">
+          <a target="_blank" href="mailto:info@yusufcanyilmaz.com">
             <img :src="require('~/assets/icons/contact/mail.svg')" width="120px" alt="mail" />
           </a>
         </div>
@@ -41,7 +41,7 @@
         <div
           class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0"
         >
-          <a href="https://www.linkedin.com/in/yusufcan-yilmaz/">
+          <a target="_blank" href="https://www.linkedin.com/in/yusufcan-yilmaz/">
             <img :src="require('~/assets/icons/contact/linkedin.svg')" width="120px" alt="linkedin" />
           </a>
         </div>
@@ -53,7 +53,7 @@
         <div
           class="flex items-center justify-center w-32 h-32 transition-all duration-300 border-2 border-white rounded-full menu-button hover:border-opacity-0"
         >
-          <a href="https://yusufcan-yilmaz.medium.com/">
+          <a target="_blank" href="https://yusufcan-yilmaz.medium.com/">
             <img :src="require('~/assets/icons/contact/medium.svg')" width="120px" alt="medium" />
           </a>
         </div>
