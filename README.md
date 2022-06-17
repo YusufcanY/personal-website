@@ -1,7 +1,8 @@
+[NEW VERSION](https://github.com/YusufcanY/personal-website-v2)
 # Yusufcan Yılmaz | Frontend Developer
 Personal Website of Yusufcan Yılmaz
 
-### What i know:
+### What i know:)
   - HTML
   - CSS
     - SCSS
